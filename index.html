@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poula-poula média</title>
+    <style>
+        body {
+            background: linear-gradient(to left, rgba(0, 0, 255, 1), rgba(0, 0, 255, 0)), url('images/1.jpg');
+            background-size: cover;
+            z-index: 1;
+            padding: 0;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .box {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            /*justify-content: space-between;*/
+            align-items: center;
+            padding: 20px 5%;
+            gap: 300px;
+        }
+        
+        .box1 {
+            padding-left: 0;
+            height: auto;
+            margin-top: 20px;
+            font-size: 30px;
+        }
+        
+        .box2 {
+            width: 150px;
+            height: 150px;
+            background-image: url(images/747376.png);
+            background-size: cover;
+            margin-left: 0;
+        }
+        
+        .flex {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: 40px;
+            padding: 20px 5%;
+            margin-top: 20px;
+            justify-content: center;
+        }
+        
+        .flexbox {
+            width: 100%;
+            max-width: 450px;
+            height: auto;
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        
+        .fleau {
+            /*border: 1px solid white;*/
+            padding: 10px auto;
+            width: 100%;
+            max-width: 305px;
+            height: 50px;
+            margin-top: 20px;
+            display: flex;
+            flex-direction: row;
+            border-radius: 10px;
+        }
+        
+        .fle1 {
+            width: 50px;
+            height: auto;
+            background-image: url(images/4.png);
+            background-size: cover;
+        }
+        
+        .fle2 {
+            width: calc(100% - 50px);
+            height: auto;
+        }
+        
+        input {
+            height: 44px;
+            width: 90%;
+            border-radius: 0px 10px 10px 0px;
+            border: none;
+            padding: 0 10px;
+        }
+        
+        .fle3 {
+            width: 50px;
+            height: auto;
+            background-image: url(images/6.png);
+            background-size: cover;
+        }
+        
+        .fle4 {
+            width: calc(100% - 50px);
+            height: auto;
+        }
+        
+        button {
+            width: 100%;
+            max-width: 305px;
+            height: 50px;
+            border-radius: 10px;
+            background-color: rgb(232, 93, 7);
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        
+        li {
+            color: white;
+            font-size: 22px;
+        }
+        
+        hr {
+            width: 100px;
+            margin-left: 0;
+        }
+        
+        .para {
+            width: 100%;
+            max-width: 305px;
+            height: auto;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            font-size: 15px;
+            flex-wrap: wrap;
+        }
+        
+        .para1 {
+            width: 130px;
+            color: grey;
+        }
+        
+        a {
+            text-decoration: none;
+            color: gray;
+        }
+        
+        .para2 {
+            width: 168px;
+            list-style-type: none;
+            margin-top: 5px;
+        }
+        
+        .text {
+            margin-left: 0;
+            color: grey;
+            text-align: center;
+        }
+        
+        .text hr {
+            width: 100px;
+            margin: 10px auto;
+            color: gray;
+        }
+        
+        .trait {
+            height: 10px;
+            background-color: rgb(232, 93, 7);
+        }
+        
+        .disk {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            width: auto;
+            height: auto;
+            background-color: white;
+            gap: 20px;
+            justify-content: space-between;
+            padding: 20px 5%;
+        }
+        
+        .risk {
+            width: 150px;
+            height: 120px;
+            margin-left: 0;
+            background-image: url(images/11.png);
+            background-size: cover;
+        }
+        
+        .risk1 {
+            width: 100%;
+            max-width: 500px;
+            text-align: center;
+        }
+        
+        .lie {
+            color: rgb(232, 93, 7);
+        }
+        
+        .liam {
+            color: white;
+        }
+        
+        .lam {
+            width: 100%;
+            max-width: 300px;
+            color: white;
+            border: 1px solid white;
+            margin-bottom: 15px;
+        }
+        
+        input[type="checkbox"] {
+            width: 15px;
+            height: 15px; 
+            transform: scale(1.2);
+            margin-right: 2px; 
+            color: gray;
+        }
+        
+        input[type="checkbox"] {
+            appearance: none; 
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            border: 1px solid black;
+            border-radius: 4px;
+        }
+        
+        input[type="checkbox"]:checked::after {
+            content: '✓';
+            color: red; 
+        }
+        
+        select {
+            width: 100px;
+            height: 30px;
+            border-radius: 5px;
+            background-color: white;
+            color: black;
+        }
+        
+        /* Media Queries pour la responsivité */
+        @media (max-width: 768px) {
+            .box {
+                justify-content: center;
+                text-align: center;
+            }
+            
+            .box1 {
+                font-size: 24px;
+            }
+            
+            .box2 {
+                margin-top: 15px;
+            }
+            
+            li {
+                font-size: 18px;
+            }
+            
+            .risk1 {
+                margin-top: 20px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .box1 {
+                font-size: 20px;
+            }
+            
+            li {
+                font-size: 16px;
+            }
+            
+            .para {
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            .para2 {
+                width: 100%;
+            }
+            
+            .disk {
+                justify-content: center;
+                text-align: center;
+            }
+            
+            .risk {
+                margin: 0 auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="box1">
+            <p>  <span class="liam">Bienvenue</span> <span class="lie">Poula-poula média</span> </p> 
+        </div>
+        <div class="box2"> 
+        </div> 
+    </div>
+    
+     <div class="flex"> 
+        <div class="flexbox">
+            <ul>
+                <hr>
+                <li>Partagez vos souvenirs</li>
+                <li>Connectez vous avec les autres</li>
+                <li>Faites vous de nouveau ami</li>
+                <li>Vente et achat </li>
+                <li>Rencontre</li>
+                <li>Offres d'emploi</li>
+                <li>Magasine mode et santé</li>
+                <hr>
+            </ul>
+        </div>
+        <div class="flexbox">
+            <div class="fleau">
+                <div class="fle1"></div>
+                <div class="fle2">
+                    <input type="text" placeholder="USENAME">
+                </div>
+            </div>
+            <div class="fleau">
+                <div class="fle3"></div>
+                <div class="fle4">
+                    <input type="password" placeholder=".....">
+                </div>
+            </div>
+            <button type="submit" value="">LOGIN </button>
+            <div class="para">
+                <div class="para1">
+                    <form>
+                        <label>
+                          <input type="checkbox" name="remember_me" value="yes"> Remember me
+                        </label>
+                      </form>
+                </div>
+                <div class="para2">
+                    <i><a href="">Forgot your password? </a> </i> 
+                </div>
+            </div>
+            <p class="text"> No registered? Create an account</p> 
+            <div class="lam"> </div> 
+        </div>
+    </div>
+    <footer>
+        <div class="trait"></div>
+        <div class="disk">
+            <div class="risk"></div>
+            <div class="risk1">
+                <p class="lie">@2025 Poula-poula média</p>
+                <p> <b>  Environ Conditions générales de vente Confidentialité <br>
+                    Contactez-nous Annuaire</b></p>
+                <p>
+                    <select name="" id="">
+                        <option value="">French</option>
+                        <option value="">Deutsch</option>
+                        <option value="">English</option>
+                        <option value="">Chinese</option>
+                        <option value="">Arabe</option>
+                        <option value="">Spanish</option>
+                    </select>
+                </p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
